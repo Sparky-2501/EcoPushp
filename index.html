@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOPASY - Your Online Shopping Destination</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const trendingProducts = [
+                { name: "Wireless Earbuds", img: "https://images.fonearena.com/blog/wp-content/uploads/2021/09/Dizo-GoPods-and-GoPods-Neo.jpg", price: "325rs" , link:"https://www.shopsy.in/tecsox-max-10-true-wireless-earbuds-charging-case-50hrs-playtime-ipx-bluetooth-headset/p/itm2b5e6c62231ad?pid=XHOGGMFVZS3QPHQG&lid=LSTXHOGGMFVZS3QPHQGGOJLJJ&marketplace=FLIPKART&store=0pm" },
+                { name: "Smartwatch", img: "https://m.media-amazon.com/images/I/819DWQLgjKL._AC_SY200_.jpg", price: "115rs", link:"https://www.shopsy.in/watches-men-combo-pack-2-analog-watch/p/itmad2859a83f17f?pid=XWWGKUAAGQVH5BYD&lid=LSTXWWGKUAAGQVH5BYDJ0ZHCX&marketplace=FLIPKART&store=r18" },
+                { name: "Bluetooth Speaker", img: "https://m.media-amazon.com/images/I/81Dl7qzd40L._AC_UY654_FMwebp_QL65_.jpg", price: "399rs" , link:"https://www.shopsy.in/house-sound-hos-9-w-bluetooth-speaker/p/itmfd0c321741889?pid=ACCH5WP9QQJAZKZG&lid=LSTACCH5WP9QQJAZKZGCALZMA&marketplace=FLIPKART&q=bluetooth+speaker&store=0pm%2F0o7"}
+            ];
+
+            const categories = [
+                { 
+                    name: "Electronics", 
+                    img: "https://tse2.mm.bing.net/th?id=OIP.4mLjyZUBn_bOWJre0ioWMwHaEK&pid=ImgDet&w=153&h=86&c=7", 
+                    description: "Find the latest gadgets, devices, and accessories to keep you connected.", 
+                    link: "https://www.shopsy.in/0pm/~cs-whjyu0ixds/pr?sid=0pm&collection-tab-name=Earphones+&bu=SHOPSY_EXCLUSIVE&pageCriteria=default" 
+                },
+                { 
+                    name: "Fashion", 
+                    img: "https://tse2.mm.bing.net/th?id=OIP.RDnbeE1q2NTfaS5QycFPcQHaEK&pid=ImgDet&w=153&h=86&c=7", 
+                    description: "Discover trendy clothing, shoes, and accessories for every occasion.", 
+                    link: "https://www.shopsy.in/clo/ash/axc/mmk/kp7/~cs-9o5996ta5y/pr?sid=clo,ash,axc,mmk,kp7&collection-tab-name=Casual+Shirts&bu=SHOPSY_EXCLUSIVE&pageCriteria=default" 
+                },
+                { 
+                    name: "Home & Kitchen", 
+                    img: "https://tse1.mm.bing.net/th?id=OIP.9uCLSNyUg_5DxmZOfd9wzgHaHa&pid=ImgDet&w=153&h=153&c=7", 
+                    description: "Explore a variety of home essentials and kitchen appliances.", 
+                    link: "https://www.shopsy.in/kitchen-containers-online" 
+                },
+                { 
+                    name: "Beauty", 
+                    img: "https://th.bing.com/th/id/OIP.U4IbBsgOHLflZKAN29srCgHaD4?w=343&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7", 
+                    description: "Shop for skincare, makeup, and wellness products to look your best.", 
+                    link: "https://www.shopsy.in/zlw/79s/~cs-6ltmwa1dtq/pr?sid=zlw,79s&collection-tab-name=Hair+Dryers+and+More&bu=SHOPSY_EXCLUSIVE" 
+                }
+            ];
+
+            const trendingContainer = document.getElementById("trending-products");
+            trendingProducts.forEach(product => {
+                const productDiv = document.createElement("div");
+                productDiv.innerHTML = `
+                <a href="${product.link}" target="_blank">
+                <img src="${product.img}" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <p>${product.price}</p>
+                `;
+                trendingContainer.appendChild(productDiv);
+            });
+
+            const categoryContainer = document.querySelector(".category-list");
+            categories.forEach(category => {
+                const categoryDiv = document.createElement("div");
+                categoryDiv.innerHTML = `
+                    <a href="${category.link}" target="_blank">
+                        <img src="${category.img}" alt="${category.name}">
+                        <h3>${category.name}</h3>
+                        <p>${category.description}</p>
+                    </a>
+                `;
+                categoryDiv.style.border = "1px solid #ddd"; // Optional: Style each category container
+                categoryDiv.style.padding = "10px";          // Optional: Add padding
+                categoryContainer.appendChild(categoryDiv);
+            });
+        });
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>SHOPASY</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#trending">Trending</a></li>
+                <li><a href="https://www.shopsy.in/">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1><u>Welcome to SHOPASY!!</u></h1>
+            <p><i>Your one-stop shop for all things trendy and exciting!</i></p>
+            <marquee class="marquee">sale ends tonight !! save big on first order !! upto 25% off on first order !! best deals for you !! </marquee>
+        </section>
+
+        <section id="trending" class="trending">
+            <h2><b>Trending Now</b></h2>
+            <div class="products" id="trending-products">
+                <!-- Trending products -->
+            </div>
+        </section>
+
+        <section id="categories" class="categories">
+            <h2>Shop by Categories</h2>
+            <div class="category-list">
+                <!-- Categories -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 SHOPASY by Prathamesh Shelke. All rights reserved.</p>
+    </footer>
+</body>
+</html>
