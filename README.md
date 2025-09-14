@@ -1,2 +1,3 @@
-# first-web-page
-web page of shopping website 
+# EcoPushp
+
+EcoPushp is a sustainable brand dedicated to upcycling floral waste into eco-friendly, handcrafted products such as natural incense sticks, compost, herbal colors, handmade soaps, and sustainable décor items. Our mission is to reduce floral waste pollution, promote a circular economy, and create social impact by working with local women and artisans. Every product we make is designed to be kind to the Earth, safe for you, and supportive of the communities we work with. At EcoPushp, we don’t just recycle — we reimagine. Every petal has a purpose, and every purchase supports a cleaner, greener, and more conscious world.
