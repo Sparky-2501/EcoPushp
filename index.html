@@ -1,115 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHOPESY - Your Online Shopping Destination</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const trendingProducts = [
-                { name: "Wireless Earbuds", img: "https://images.fonearena.com/blog/wp-content/uploads/2021/09/Dizo-GoPods-and-GoPods-Neo.jpg", price: "325rs" , link:"https://www.shopsy.in/tecsox-max-10-true-wireless-earbuds-charging-case-50hrs-playtime-ipx-bluetooth-headset/p/itm2b5e6c62231ad?pid=XHOGGMFVZS3QPHQG&lid=LSTXHOGGMFVZS3QPHQGGOJLJJ&marketplace=FLIPKART&store=0pm" },
-                { name: "Smartwatch", img: "https://m.media-amazon.com/images/I/819DWQLgjKL._AC_SY200_.jpg", price: "115rs", link:"https://www.shopsy.in/watches-men-combo-pack-2-analog-watch/p/itmad2859a83f17f?pid=XWWGKUAAGQVH5BYD&lid=LSTXWWGKUAAGQVH5BYDJ0ZHCX&marketplace=FLIPKART&store=r18" },
-                { name: "Bluetooth Speaker", img: "https://m.media-amazon.com/images/I/81Dl7qzd40L._AC_UY654_FMwebp_QL65_.jpg", price: "399rs" , link:"https://www.shopsy.in/house-sound-hos-9-w-bluetooth-speaker/p/itmfd0c321741889?pid=ACCH5WP9QQJAZKZG&lid=LSTACCH5WP9QQJAZKZGCALZMA&marketplace=FLIPKART&q=bluetooth+speaker&store=0pm%2F0o7"}
-            ];
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoPushp</title>
 
-            const categories = [
-                { 
-                    name: "Electronics", 
-                    img: "https://tse2.mm.bing.net/th?id=OIP.4mLjyZUBn_bOWJre0ioWMwHaEK&pid=ImgDet&w=153&h=86&c=7", 
-                    description: "Find the latest gadgets, devices, and accessories to keep you connected.", 
-                    link: "https://www.shopsy.in/0pm/~cs-whjyu0ixds/pr?sid=0pm&collection-tab-name=Earphones+&bu=SHOPSY_EXCLUSIVE&pageCriteria=default" 
-                },
-                { 
-                    name: "Fashion", 
-                    img: "https://tse2.mm.bing.net/th?id=OIP.RDnbeE1q2NTfaS5QycFPcQHaEK&pid=ImgDet&w=153&h=86&c=7", 
-                    description: "Discover trendy clothing, shoes, and accessories for every occasion.", 
-                    link: "https://www.shopsy.in/clo/ash/axc/mmk/kp7/~cs-9o5996ta5y/pr?sid=clo,ash,axc,mmk,kp7&collection-tab-name=Casual+Shirts&bu=SHOPSY_EXCLUSIVE&pageCriteria=default" 
-                },
-                { 
-                    name: "Home & Kitchen", 
-                    img: "https://tse1.mm.bing.net/th?id=OIP.9uCLSNyUg_5DxmZOfd9wzgHaHa&pid=ImgDet&w=153&h=153&c=7", 
-                    description: "Explore a variety of home essentials and kitchen appliances.", 
-                    link: "https://www.shopsy.in/kitchen-containers-online" 
-                },
-                { 
-                    name: "Beauty", 
-                    img: "https://th.bing.com/th/id/OIP.U4IbBsgOHLflZKAN29srCgHaD4?w=343&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7", 
-                    description: "Shop for skincare, makeup, and wellness products to look your best.", 
-                    link: "https://www.shopsy.in/zlw/79s/~cs-6ltmwa1dtq/pr?sid=zlw,79s&collection-tab-name=Hair+Dryers+and+More&bu=SHOPSY_EXCLUSIVE" 
-                }
-            ];
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-            const trendingContainer = document.getElementById("trending-products");
-            trendingProducts.forEach(product => {
-                const productDiv = document.createElement("div");
-                productDiv.innerHTML = `
-                <a href="${product.link}" target="_blank">
-                <img src="${product.img}" alt="${product.name}">
-                <h3>${product.name}</h3>
-                <p>${product.price}</p>
-                `;
-                trendingContainer.appendChild(productDiv);
-            });
+  <!-- Favicon -->
+  <link rel="icon" href="https://png.pngtree.com/png-clipart/20230408/original/pngtree-transparent-watercolor-flowers-png-image_9036505.png" />
 
-            const categoryContainer = document.querySelector(".category-list");
-            categories.forEach(category => {
-                const categoryDiv = document.createElement("div");
-                categoryDiv.innerHTML = `
-                    <a href="${category.link}" target="_blank">
-                        <img src="${category.img}" alt="${category.name}">
-                        <h3>${category.name}</h3>
-                        <p>${category.description}</p>
-                    </a>
-                `;
-                categoryDiv.style.border = "1px solid #ddd"; // Optional: Style each category container
-                categoryDiv.style.padding = "10px";          // Optional: Add padding
-                categoryContainer.appendChild(categoryDiv);
-            });
-        });
-    </script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <h1>SHOPESY</h1>
-        </div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#categories">Categories</a></li>
-                <li><a href="#trending">Trending</a></li>
-                <li><a href="https://www.shopsy.in/">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Canvas for petals -->
+  <canvas id="bgCanvas"></canvas>
 
-    <main>
-        <section class="hero">
-            <h1><u>Welcome to SHOPESY!!</u></h1>
-            <p><i>Your one-stop shop for all things trendy and exciting!</i></p>
-            <marquee class="marquee">sale ends tonight !! save big on first order !! upto 25% off on first order !! best deals for you !! </marquee>
-        </section>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="https://png.pngtree.com/png-clipart/20230408/original/pngtree-transparent-watercolor-flowers-png-image_9036505.png" alt="EcoPushp Logo" />
+    </div>
+    <nav>
+      <a href="#story">Story</a>
+      <a href="#products">Products</a>
+      <a href="#about">About Us</a>
+    </nav>
+  </header>
 
-        <section id="trending" class="trending">
-            <h2><b>Trending Now</b></h2>
-            <div class="products" id="trending-products">
-                <!-- Trending products -->
-            </div>
-        </section>
+  <!-- HERO -->
+ <section id="hero">
+  <div class="name">
+    <h1>ECO<br />PUSHP</h1>
+  </div>
 
-        <section id="categories" class="categories">
-            <h2>Shop by Categories</h2>
-            <div class="category-list">
-                <!-- Categories -->
-            </div>
-        </section>
-    </main>
+  <!-- Bottom right order + tagline -->
+  <div class="hero-order">
+    <a href="#products"><button class="hero-btn main">Order Now</button></a>
+    <h2 class="tagline">~ Every Petal Counts</h2>
+  </div>
+</section>
 
-    <footer class="footer">
-        <p>&copy; 2025 SHOPASY by Prathamesh Shelke. All rights reserved.</p>
-    </footer>
+
+
+  <!-- STORY -->
+  <section id="story">
+    <h2>Our Story</h2>
+    <div class="story">
+      <p>
+        It all began with a simple observation — the beautiful flowers offered in temples and events were ending
+        up as waste, polluting rivers and landfills. What was once a symbol of devotion and joy was now harming
+        the environment. This sight sparked an idea: what if these flowers could bloom again in a new form? With
+        that thought, EcoPushp was born — a passion project turned purpose-driven venture. We started collecting
+        discarded flowers from temples, weddings, and markets, and began experimenting with ways to give them a
+        second life. The journey began in small batches, making natural incense sticks and compost. Over time,
+        our innovations grew into a range of eco-friendly products — all made from petals that would have
+        otherwise been thrown away. Our story is about turning waste into wonder, empowering local communities,
+        and proving that even the smallest acts can lead to big changes for the planet.
+      </p>
+      <div class="story-container">
+        <div class="storycard"><img src="1585914988005047-0.jpg" alt="Flower Recycling" /></div>
+        <div class="storycard"><img src="OIP.webp" alt="EcoPushp Work" /></div>
+        <div class="storycard"><img src="3-ganga-clean-up-1024x576.jpg" alt="River Cleaning" /></div>
+        <div class="storycard"><img src="81taY8myiBS._SL1500_.jpg" alt="Floral Products" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products">
+    <h2>Our Products</h2>
+    <div class="card-container">
+      <div class="card"><img src="https://incensemachinery.com/wp-content/uploads/2022/08/Religious-Incense-Cones.webp" alt="dhoop"><p class="card-title">Dhoop</p><p class="card-info">50 rs.</p><button>Order</button></div>
+      <div class="card"><img src="https://4.imimg.com/data4/IW/KL/MY-10027771/2-250x250.jpg" alt="agarbatti"><p class="card-title">Agarbatti</p><p class="card-info">50 rs.</p><button>Order</button></div>
+      <div class="card"><img src="https://tse4.mm.bing.net/th/id/OIP.nB7wCh-mTcdTMaHT-DfDAwHaHa" alt="sticks"><p class="card-title">Fragrance Sticks</p><p class="card-info">60 rs.</p><button>Order</button></div>
+      <div class="card"><img src="https://www.custompackagingandproducts.com/wp-content/uploads/2013/06/300-MP900431722.jpg" alt="fertilizer"><p class="card-title">Organic Fertilizer</p><p class="card-info">100 rs./1 U</p><button>Order</button></div>
+      <div class="card"><img src="https://tse2.mm.bing.net/th/id/OIP.ftFDpQHznk5Gb3ILut2OKAHaCc" alt="soaps"><p class="card-title">Handmade Soaps</p><p class="card-info">30 rs/piece</p><button>Order</button></div>
+      <!-- <div class="card"><img src="https://th.bing.com/th/id/R.2da07d4a01b169c9328030773c4f97f9" alt="potpourri"><p class="card-title">Pot-pourri</p><p class="card-info">99 rs.</p><button>Order</button></div> -->
+      <div class="card"><img src="https://1.bp.blogspot.com/-iDc6bMc0Czg/V6JHqaDKAhI/AAAAAAAAD3E/9ot50po5Evku2_znHnEAWZmWQizFSxV6gCLcB/s1600/essential-oil-image.jpg" alt="oil"><p class="card-title">Essential Oil</p><p class="card-info">50 rs.</p><button>Order</button></div>
+      <div class="card"><img src="https://tse4.mm.bing.net/th/id/OIP.bDaggY8aEbfgP8fhaUQp0QHaE8" alt="pesticides"><p class="card-title">Herbal Pesticides</p><p class="card-info">100 rs.</p><button>Order</button></div>
+      <div class="card"><img src="https://m.media-amazon.com/images/I/91olfWweSbL._SL1500_.jpg" alt="diya"><p class="card-title">Diya</p><p class="card-info">5 rs each</p><button>Order</button></div>
+      <div class="card"><img src="https://www.cchobby.com/media/catalog/product/cache/f5a04654fa1291930ec6413dd4db78d6/v/1/v10921_B(2)5576b5eed7c2a.jpg" alt="candle"><p class="card-title">Show Candle</p><p class="card-info">100 rs each</p><button>Order</button></div>
+      <div class="card"><img src="https://i.ebayimg.com/thumbs/images/g/qhIAAOSwOdpXxg3N/s-l500.jpg" alt="holi colours"><p class="card-title">Organic Holi Colours (pack of 4)</p><p class="card-info">120 rs.</p><button>Order</button></div>
+      <div class="card"><img src="https://tse3.mm.bing.net/th/id/OIP.Afr2YmI3Po5AUU7eWXNt-gHaE7" alt="yellow"><p class="card-title">Holi Color - Yellow</p><p class="card-info">35 rs.</p><button>Order</button></div>
+      <div class="card"><img src="https://i.pinimg.com/originals/5b/38/37/5b38376892a838d9cddbc76e72699602.jpg" alt="orange"><p class="card-title">Holi Color - Orange</p><p class="card-info">35 rs.</p><button>Order</button></div>
+      <div class="card"><img src="https://tse1.explicit.bing.net/th/id/OIP.PACQruLT00TL61z41anWeAHaHa" alt="red"><p class="card-title">Holi Color - Red</p><p class="card-info">35 rs.</p><button>Order</button></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Us</h2>
+    <div class="about">
+      <p>
+        EcoPushp is a sustainable brand dedicated to upcycling floral waste into eco-friendly, handcrafted
+        products such as natural incense sticks, compost, herbal colors, handmade soaps, and sustainable décor
+        items. Our mission is to reduce floral waste pollution, promote a circular economy, and create social
+        impact by working with local women and artisans. Every product we make is designed to be kind to the
+        Earth, safe for you, and supportive of the communities we work with. At EcoPushp, we don’t just recycle
+        — we reimagine. Every petal has a purpose, and every purchase supports a cleaner, greener, and more
+        conscious world.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>&copy; 2025 EcoPushp | ~ Every Petal Counts</footer>
+
+  <!-- JS -->
+  <script src="background.js"></script>
 </body>
 </html>
