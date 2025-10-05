@@ -1,10 +1,10 @@
-/* style.css — light theme with petal-friendly styles */
+
 
 :root{
   --pink: #FF6B9A;
   --pink-dark: #ff4f7f;
   --muted: #666;
-  --card-bg: #f2ecf6; /* light gray for product containers */
+  --card-bg: #f2ecf6; 
   --page-bg: #ffffffe9;
   --text: #222;
 }
@@ -21,7 +21,7 @@ body {
   -moz-osx-font-smoothing:grayscale;
 }
 
-/* Canvas sits behind content */
+/* Canvas sits */
 #bgCanvas {
   position: fixed;
   inset: 0;
@@ -57,8 +57,6 @@ nav a {
   transition: color .18s ease;
 }
 nav a:hover { color: var(--pink); }
-
-/* === HERO === */
 /* HERO SECTION */
 #hero {
   min-height: 90vh;
@@ -117,8 +115,6 @@ nav a:hover { color: var(--pink); }
   margin: 0;
   text-align: right;
 }
-
-/* Mobile adjustments */
 @media (max-width: 768px) {
   .hero-order {
     right: 4%;
@@ -164,6 +160,7 @@ h2 {
 
 .story-container {
   margin: 30px 5px 0 5px;
+  padding:20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 24px;
@@ -246,3 +243,4 @@ footer {
   .name { font-size: 56px; left: 6%; top: 6%; color: var(--pink); }
   #btn { right: 6%; bottom: 8%; }
 }
+
